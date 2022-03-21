@@ -10,7 +10,9 @@
     "eject": "expo eject",
     "test": "jest --watchAll",
     "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install",
+    "loki": "loki"
   },
   "jest": {
     "preset": "jest-expo"
@@ -57,8 +59,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": ">=6",
     "jest": "^26.6.3",
     "jest-expo": "~44.0.1",
+    "lint-staged": ">=10",
     "loki": "^0.28.1",
     "prettier": "^2.6.0",
     "react-test-renderer": "17.0.1",
@@ -71,5 +75,8 @@
         "target": "ios.simulator"
       }
     }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   }
 }
